@@ -25,15 +25,15 @@ const config = {
     ]
 };
 
-console.log(
-    "SENDGRID_API_KEY exists:",
-    Boolean(process.env.SENDGRID_API_KEY)
-);
+// console.log(
+//     "SENDGRID_API_KEY exists:",
+//     Boolean(process.env.SENDGRID_API_KEY)
+// );
 
-console.log(
-    "SENDGRID_API_KEY prefix:",
-    process.env.SENDGRID_API_KEY?.substring(0, 3)
-);
+// console.log(
+//     "SENDGRID_API_KEY prefix:",
+//     process.env.SENDGRID_API_KEY?.substring(0, 3)
+// );
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -155,9 +155,9 @@ async function checkRegistration() {
     // Only send notification once
     //
 
-    if ( true
-        // !state.registrationOpen &&
-        // result.isOpen
+    if ( 
+        !state.registrationOpen &&
+        result.isOpen
     ) {
 
         await sendEmail(
