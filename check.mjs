@@ -146,9 +146,9 @@ async function checkRegistration() {
     // Only send notification once
     //
 
-    if (
-        !state.registrationOpen &&
-        result.isOpen
+    if ( true
+        // !state.registrationOpen &&
+        // result.isOpen
     ) {
 
         await sendEmail(
