@@ -26,15 +26,14 @@ const config = {
 };
 
 console.log(
-    "SendGrid key exists:",
-    !!process.env.SENDGRID_API_KEY
+    "SENDGRID_API_KEY exists:",
+    Boolean(process.env.SENDGRID_API_KEY)
 );
 
 console.log(
-    "SendGrid key starts correctly:",
-    process.env.SENDGRID_API_KEY?.startsWith("SG.")
+    "SENDGRID_API_KEY prefix:",
+    process.env.SENDGRID_API_KEY?.substring(0, 3)
 );
-
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 

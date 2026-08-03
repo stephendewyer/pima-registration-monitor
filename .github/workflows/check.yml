@@ -14,7 +14,7 @@ permissions:
 jobs:
   check-registration:
     runs-on: ubuntu-latest
-
+    environment: Run registration monitor
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,11 +31,12 @@ jobs:
         run: npm ci
 
       - name: Run registration monitor
+        run: node check.mjs
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: node check.mjs
+        
 
       - name: Commit updated state
         run: |
