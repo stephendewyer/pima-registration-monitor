@@ -1,0 +1,32 @@
+{
+  "name": "pima-registration-monitor",
+  "version": "1.0.0",
+  "description": "send email notifications when changes to Pima FastTrack Electrical Program page",
+  "keywords": [
+    "email",
+    "notification",
+    "monitor",
+    "page",
+    "change"
+  ],
+  "homepage": "https://github.com/stephendewyer/pima-registration-monitor#readme",
+  "bugs": {
+    "url": "https://github.com/stephendewyer/pima-registration-monitor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephendewyer/pima-registration-monitor.git"
+  },
+  "license": "ISC",
+  "author": "stephen garrett dewyer",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "check": "node check.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "cheerio": "^1.2.0"
+  }
+}
