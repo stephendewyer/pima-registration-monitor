@@ -14,7 +14,7 @@ permissions:
 jobs:
   check-registration:
     runs-on: ubuntu-latest
-    environment: Run registration monitor
+    environment: production
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
