@@ -1,6 +1,7 @@
 {
   "name": "pima-registration-monitor",
   "version": "1.0.0",
+  "type": "module",
   "description": "send email notifications when changes to Pima FastTrack Electrical Program page",
   "keywords": [
     "email",
@@ -19,7 +20,6 @@
   },
   "license": "ISC",
   "author": "stephen garrett dewyer",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "check": "node check.js",

@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 import sgMail from "@sendgrid/mail";
 
 //
